@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardElevation="1dp"
+    app:cardCornerRadius="4dp"
+    style="@style/Widget.MaterialComponents.CardView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:id="@+id/trail_image"
+            android:scaleType="centerCrop"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/trail_name"
+            android:padding="8dp"
+            style="@android:style/TextAppearance.Material"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/location"
+            android:padding="8dp"
+            style="@android:style/TextAppearance.Material"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/length"
+            android:padding="8dp"
+            style="@android:style/TextAppearance.Material"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/difficulty"
+            android:padding="8dp"
+            style="@android:style/TextAppearance.Material"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

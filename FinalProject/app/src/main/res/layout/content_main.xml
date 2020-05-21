@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/find_trails_title"
+        style="@style/TextAppearance.MaterialComponents.Headline4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/location_input"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:paddingTop="10dp"
+        android:hint="@string/enter_location"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/get_user_location"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <ImageView
+        android:id="@+id/get_user_location"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/location_button_description"
+        android:src="@drawable/ic_user_location"
+        app:layout_constraintLeft_toRightOf="@id/location_input"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/activity_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_type_title"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        app:layout_constraintTop_toBottomOf="@id/location_input"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <CheckBox
+        android:id="@+id/hike_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hike"
+        android:onClick="checkBoxClicked"
+        android:paddingStart="0dp"
+        android:paddingEnd="20dp"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintTop_toBottomOf="@id/activity_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/climb_checkbox"/>
+
+    <CheckBox
+        android:id="@+id/climb_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/climb"
+        android:onClick="checkBoxClicked"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintTop_toBottomOf="@id/activity_title"
+        app:layout_constraintLeft_toRightOf="@id/hike_checkbox" />
+
+    <TextView
+        android:id="@+id/distance_title"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:text="@string/distance_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/climb_checkbox" />
+
+    <EditText
+        android:id="@+id/max_distance_input"
+        android:layout_width="70dp"
+        android:layout_height="42dp"
+        android:inputType="number"
+        android:gravity="center_horizontal"
+        android:hint="@string/max_distance_default"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/miles_label_distance"
+        app:layout_constraintTop_toBottomOf="@id/distance_title" />
+
+    <TextView
+        android:id="@+id/miles_label_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/miles"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintLeft_toRightOf="@id/max_distance_input"
+        app:layout_constraintTop_toBottomOf="@id/distance_title" />
+
+    <TextView
+        android:id="@+id/length_title"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:text="@string/min_length_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/max_distance_input" />
+
+    <EditText
+        android:id="@+id/min_length_input"
+        android:layout_width="70dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="40dp"
+        android:inputType="number"
+        android:gravity="center_horizontal"
+        android:hint="@string/min_length_default"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/miles_label_length"
+        app:layout_constraintTop_toBottomOf="@id/max_distance_input" />
+
+    <TextView
+        android:id="@+id/miles_label_length"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/miles"
+        app:layout_constraintLeft_toRightOf="@id/min_length_input"
+        app:layout_constraintTop_toBottomOf="@id/length_title" />
+
+    <TextView
+        android:id="@+id/difficulty_title"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:text="@string/difficulty_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/min_length_input" />
+
+    <CheckBox
+        android:id="@+id/easy_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/easy"
+        android:onClick="checkBoxClicked"
+        android:paddingStart="0dp"
+        android:paddingEnd="20dp"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintTop_toBottomOf="@id/difficulty_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/medium_checkbox"/>
+
+    <CheckBox
+        android:id="@+id/medium_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/medium"
+        android:onClick="checkBoxClicked"
+        android:paddingStart="0dp"
+        android:paddingEnd="20dp"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintTop_toBottomOf="@id/difficulty_title"
+        app:layout_constraintLeft_toRightOf="@id/easy_checkbox"
+        app:layout_constraintRight_toLeftOf="@id/hard_checkbox"/>
+
+    <CheckBox
+        android:id="@+id/hard_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hard"
+        android:onClick="checkBoxClicked"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintTop_toBottomOf="@id/difficulty_title"
+        app:layout_constraintLeft_toRightOf="@id/medium_checkbox" />
+
+    <TextView
+        android:id="@+id/display_results_title"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="10dp"
+        android:text="@string/display_results"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/easy_checkbox" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        style="@style/TextAppearance.MaterialComponents.Body1"
+        app:layout_constraintTop_toBottomOf="@id/display_results_title"
+        app:layout_constraintLeft_toLeftOf="parent" >
+
+        <RadioButton
+            android:id="@+id/map_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/map"
+            android:paddingStart="0dp"
+            android:paddingEnd="20dp"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            app:layout_constraintTop_toBottomOf="@id/display_results_title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/list_radio_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/list"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            app:layout_constraintTop_toBottomOf="@id/display_results_title"
+            app:layout_constraintLeft_toRightOf="@id/map_radio_button"
+            android:onClick="onRadioButtonClicked"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_button"
+        style="@style/TextAppearance.MaterialComponents.Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

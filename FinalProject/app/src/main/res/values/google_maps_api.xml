@@ -1,0 +1,8 @@
+<resources>
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBE-Md0Q7KoKOgtgOgwW1nRg50xo2CkfyM</string>
+    <string name="google_routes_key" templateMergeStrategy="preserve" translatable="false">AIzaSyBljoR15yKbhNRK0GX_x11UiEZlGM6raek</string>
+</resources>
+
+<!--    AIzaSyCyi1-maLYMOgdx6EOx-bmYWCLJEUIIGOU-->
+<!--    AIzaSyBcK73jZoj8eg3cVjV3kwKyCVAFUdTCZCM-->
+<!--    AIzaSyAHZGstD6BQmr9bClDAmdZKlDB5PZ4Q4e4-->

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">MTNEAR</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="find_trails_title">Find Trails Near You</string>
+    <string name="activity_type_title">Activity Type</string>
+    <string name="hike">Hike</string>
+    <string name="climb">Climb</string>
+    <string name="distance_title">Maximum Distance from Location</string>
+    <string name="search_button">Search</string>
+    <string name="min_length_title">Minimum Trail Length</string>
+    <string name="difficulty_title">Difficulty Level</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="current_location">Current Location</string>
+    <string name="enter_location">Enter Location</string>
+    <string name="location_button_description">Get current location</string>
+    <string name="miles">Miles</string>
+    <string name="display_results">Display Results</string>
+    <string name="map">Map</string>
+    <string name="list">List</string>
+    <string name="action_search">Search</string>
+    <string name="action_map">Map</string>
+    <string name="action_list">List</string>
+    <string name="max_distance_default">30</string>
+    <string name="min_length_default">0</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
